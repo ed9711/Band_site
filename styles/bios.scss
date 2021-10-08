@@ -16,6 +16,45 @@
     font-weight: normal;
 }
 
+$BandSite-Black: #323232;
+$Silver: #AFAFAF;
+$White: #FFFFFF;
+$BandSite-DarkBlack: #000000;
+$Mercury: #e1e1e1;
+$Alabaster: #fafafa;
+
+
 html {
     font-family: "Avenir Next", Helvetica, sans-serif;
+    width: 100vw;
+}
+
+body {
+    margin: 0;
+}
+
+.nav {
+    width: 100vw;
+    background-color: $BandSite-Black;
+    &__title {
+        color: $White;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 1rem;
+    }
+    &-bar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+        &__link {
+            color: $White;
+            width: 50%;
+            text-align: center;
+            &--active {
+                border-bottom: $White 5px solid;
+                // border-top: transparent 5px solid;
+                padding: 0 0 0.625rem 0;
+            }
+        }
+    }
 }
