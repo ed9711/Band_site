@@ -1,27 +1,5 @@
-@font-face {
-    font-family: "Avenir Next";
-    src: url("../assets/Font/AvenirNextLTPro-Bold.otf") format("OpenType");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: "Avenir Next";
-    src: url("../assets/Font/AvenirNextLTPro-Demi.otf") format("OpenType");
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: "Avenir Next";
-    src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("OpenType");
-    font-weight: normal;
-}
-
-$BandSite-Black: #323232;
-$Silver: #AFAFAF;
-$White: #FFFFFF;
-$BandSite-DarkBlack: #000000;
-$Mercury: #e1e1e1;
-$Alabaster: #fafafa;
+@use "./partials/colour" as *;
+@use "./partials/fonts" as *;
 
 
 html {
