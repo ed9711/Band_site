@@ -1,0 +1,9 @@
+// text detail 
+// img?
+// background+padding
+
+@mixin text-detail($size, $height, $weight) {
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+}

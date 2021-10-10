@@ -11,8 +11,8 @@
     <nav class="nav">
         <h1 class="nav__title">BANDSITE</h1>
         <div class="nav-bar">
-            <div class="nav-bar__link nav-bar__link--active">Biography</div>
-            <div class="nav-bar__link">Shows</div>
+            <a href="/index.html" class="nav-bar__link nav-bar__link--active">Biography</a>
+            <a href="" class="nav-bar__link">Shows</a>
         </div>
     </nav>
 
@@ -22,7 +22,9 @@
 
     <section class="about">
         <h1 class="about__title">About the Musicians</h1>
-        <img src="/assets/Images/band.jpg" alt="band">
+        <div class="about__img-container">
+            <img class="about__img" src="/assets/Images/band.jpg" alt="band">
+        </div>
         <p class="about__quote">“We push each other to be the best. It’s not 
             uncommon for one of us to say ‘this needs 
             to be better, back to the drawing board’”</p>
@@ -57,48 +59,43 @@
     </section>
 
     <section class="photos">
-        <img class="photos__img" src="/assets/Images/Photo-gallery-1.jpg" alt="Photo-gallery-1">
-        <img class="photos__img" src="/assets/Images/Photo-gallery-2.jpg" alt="Photo-gallery-2">
-        <img class="photos__img" src="/assets/Images/Photo-gallery-3.jpg" alt="Photo-gallery-3">
-        <img class="photos__img" src="/assets/Images/Photo-gallery-4.jpg" alt="Photo-gallery-4">
-        <img class="photos__img" src="/assets/Images/Photo-gallery-5.jpg" alt="Photo-gallery-5">
-        <img class="photos__img" src="/assets/Images/Photo-gallery-6.jpg" alt="Photo-gallery-6">
-        <img class="photos__img" src="/assets/Images/Photo-gallery-7.jpg" alt="Photo-gallery-7">
-        <img class="photos__img" src="/assets/Images/Photo-gallery-8.jpg" alt="Photo-gallery-8">
-        <img class="photos__img" src="/assets/Images/Photo-gallery-9.jpg" alt="Photo-gallery-9">
+        <h1 class="photos__title">Photo Gallery</h1>
+        <div class="photos__img-container"><img class="photos__img" src="/assets/Images/Photo-gallery-1.jpg" alt="Photo-gallery-1"></div>
+        <div class="photos__img-container"><img class="photos__img" src="/assets/Images/Photo-gallery-2.jpg" alt="Photo-gallery-2"></div>
+        <div class="photos__img-container"><img class="photos__img" src="/assets/Images/Photo-gallery-3.jpg" alt="Photo-gallery-3"></div>
+        <div class="photos__img-container"><img class="photos__img" src="/assets/Images/Photo-gallery-4.jpg" alt="Photo-gallery-4"></div>
+        <div class="photos__img-container"><img class="photos__img" src="/assets/Images/Photo-gallery-5.jpg" alt="Photo-gallery-5"></div>
+        <div class="photos__img-container"><img class="photos__img" src="/assets/Images/Photo-gallery-6.jpg" alt="Photo-gallery-6"></div>
+        <div class="photos__img-container"><img class="photos__img" src="/assets/Images/Photo-gallery-7.jpg" alt="Photo-gallery-7"></div>
+        <div class="photos__img-container"><img class="photos__img" src="/assets/Images/Photo-gallery-8.jpg" alt="Photo-gallery-8"></div>
+        <div class="photos__img-container"><img class="photos__img" src="/assets/Images/Photo-gallery-9.jpg" alt="Photo-gallery-9"></div>
     </section>
     
-    <footer>
-        <h1>Get in Touch</h1>
+    <footer class="footer">
+        <h1 class="footer__title">Get in Touch</h1>
         <div class="footer__icons">
             <img class="footer__icon" src="/assets/Icons/SVG/Icon-instagram.svg" alt="Icon-instagram">
             <img class="footer__icon" src="/assets/Icons/SVG/Icon-facebook.svg" alt="Icon-facebook">
             <img class="footer__icon" src="/assets/Icons/SVG/Icon-twitter.svg" alt="Icon-twitter">
         </div>
         <div class="footer__section">
-            <p class="footer__detail footer__detail--bold">Cam Adams</p>
-            <p class="footer__detail footer__detail--bold">The Bees Knees Management</p>
-            <p class="footer__detail">503 Broadway Penthouse,
-                New York, NY 10012, USA</p>
-            <p class="footer__detail"><a class="footer__link" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></p>
+            <p class="footer__detail ">Cam Adams <br>The Bees Knees Management</p>
+            <p class="footer__detail footer__detail--coloured">503 Broadway Penthouse, <br>New York, NY 10012, USA</p>
+            <p><a class="footer__detail--coloured footer__link" href="mailto:info@thebeesknees.com">info@thebeesknees.com</a></p>
         </div>
         <div class="footer__section">
-            <p class="footer__detail footer__detail--bold">Pearl Gregg</p>
-            <p class="footer__detail footer__detail--bold">Limitless Artist Group</p>
-            <p class="footer__detail">Booking Agent for
-                US / South America / Japan</p>
-            <p class="footer__detail"><a class="footer__link" href="mailto:pearl.gregg@limitlessag.com">pearl.gregg@limitlessag.com</a></p>
+            <p class="footer__detail">Pearl Gregg <br>Limitless Artist Group</p>
+            <p class="footer__detail footer__detail--coloured">Booking Agent for <br>US / South America / Japan</p>
+            <p><a class="footer__detail--coloured footer__link" href="mailto:pearl.gregg@limitlessag.com">pearl.gregg@limitlessag.com</a></p>
         </div>
         <div class="footer__section">
-            <p class="footer__detail footer__detail--bold">Carson Whyte</p>
-            <p class="footer__detail footer__detail--bold">ARCH Entertainment</p>
-            <p class="footer__detail">Booking Agent for
-                UK / EU / AU</p>
-            <p class="footer__detail"><a class="footer__link" href="mailto:cwhyte@archentertainment.com">cwhyte@archentertainment.com</a></p>
+            <p class="footer__detail">Carson Whyte <br>ARCH Entertainment</p>
+            <p class="footer__detail footer__detail--coloured">Booking Agent for <br>UK / EU / AU</p>
+            <p><a class="footer__detail--coloured footer__link" href="mailto:cwhyte@archentertainment.com">cwhyte@archentertainment.com</a></p>
         </div>
-        <div class="footer__ending">
-            <h1>BANDSITE</h1>
-            <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
+        <div class="footer__section">
+            <h1 class="footer__ending">BANDSITE</h1>
+            <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
         </div>
     </footer>
 </body>
