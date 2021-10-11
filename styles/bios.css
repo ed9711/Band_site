@@ -35,6 +35,28 @@
     color: #AFAFAF;
   }
 }
+@-webkit-keyframes colour-change-reverse {
+  0% {
+    color: #AFAFAF;
+  }
+  50% {
+    color: #e1e1e1;
+  }
+  100% {
+    color: #FFFFFF;
+  }
+}
+@keyframes colour-change-reverse {
+  0% {
+    color: #AFAFAF;
+  }
+  50% {
+    color: #e1e1e1;
+  }
+  100% {
+    color: #FFFFFF;
+  }
+}
 html {
   font-family: "Avenir Next", Helvetica, sans-serif;
   width: 100vw;
@@ -91,8 +113,8 @@ body {
   font-weight: normal;
 }
 .nav-bar__link:hover {
-  -webkit-animation-name: colour-change;
-          animation-name: colour-change;
+  -webkit-animation-name: colour-change-reverse;
+          animation-name: colour-change-reverse;
   -webkit-animation-duration: 0.3s;
           animation-duration: 0.3s;
   -webkit-animation-fill-mode: forwards;
@@ -109,6 +131,16 @@ body {
   border-bottom: #FFFFFF 3.5px solid;
   color: #FFFFFF;
   padding: 0 0 0.625rem 0;
+}
+.nav-bar__link--active:hover {
+  -webkit-animation-name: colour-change;
+          animation-name: colour-change;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 @media (min-width: 768px) {
   .nav-bar__link--active {

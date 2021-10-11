@@ -12,3 +12,15 @@
         color: $Silver;
     }
 }
+
+@keyframes colour-change-reverse {
+    0% {
+        color: $Silver;
+    }
+    50% {
+        color: $Mercury;
+    }
+    100% {
+        color: $White;
+    }
+}

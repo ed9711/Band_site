@@ -17,3 +17,12 @@
 @mixin detail-spec {
     @include text-detail(13px, 18px, normal)
 }
+
+@mixin hover-animation($name) {
+    &:hover {
+        animation-name: $name;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+    }
+}
