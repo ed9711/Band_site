@@ -1,6 +1,9 @@
 // text detail 
 // img?
-// background+padding
+// @media (min-width: $desktop) {
+//     padding-left: calc((100% - #{$desktop})/2 + 128px);
+//     padding-right: calc((100% - #{$desktop})/2 + 128px);
+// }
 
 @mixin text-detail($size, $height, $weight) {
     font-size: $size;
