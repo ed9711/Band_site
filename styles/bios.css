@@ -13,6 +13,28 @@
   src: url("../assets/Font/AvenirNextLTPro-Regular.otf") format("OpenType");
   font-weight: normal;
 }
+@-webkit-keyframes colour-change {
+  0% {
+    color: #FFFFFF;
+  }
+  50% {
+    color: #e1e1e1;
+  }
+  100% {
+    color: #AFAFAF;
+  }
+}
+@keyframes colour-change {
+  0% {
+    color: #FFFFFF;
+  }
+  50% {
+    color: #e1e1e1;
+  }
+  100% {
+    color: #AFAFAF;
+  }
+}
 html {
   font-family: "Avenir Next", Helvetica, sans-serif;
   width: 100vw;
@@ -67,6 +89,16 @@ body {
   line-height: 18px;
   font-weight: normal;
 }
+.nav-bar__link:hover {
+  -webkit-animation-name: colour-change;
+          animation-name: colour-change;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
 @media (min-width: 768px) {
   .nav-bar__link {
     width: auto;
@@ -98,7 +130,7 @@ body {
 .hero__title {
   padding: 25% 0;
   color: #FFFFFF;
-  font-size: 24px;
+  font-size: 7.5vw;
   line-height: 32px;
   font-weight: 600;
   padding-left: 5vw;
@@ -291,7 +323,6 @@ body {
   line-height: 18px;
   font-weight: normal;
   color: #FFFFFF;
-  padding-right: 6rem;
 }
 .footer__detail--coloured {
   color: #e1e1e1;

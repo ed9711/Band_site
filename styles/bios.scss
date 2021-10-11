@@ -2,6 +2,7 @@
 @use "./partials/fonts" as *;
 @use "./partials/mixins" as *;
 @use "./partials/global" as *;
+@use "./partials/keyframes" as *;
 
 
 html {
@@ -44,10 +45,16 @@ body {
             width: 50%;
             text-align: center;
             text-decoration: none;
+            &:hover {
+                animation-name: colour-change;
+                animation-duration: 0.3s;
+                animation-fill-mode: forwards;
+                animation-timing-function: linear;
+            }
             @media (min-width: $tablet){
                 width: auto;
             }
-            @include text-detail(13px, 18px, normal);
+            @include detail-spec;
             &--active {
                 border-bottom: $White 3.5px solid;
                 color: $White;
@@ -72,7 +79,7 @@ body {
     &__title {
         padding: 25% 0;
         color: $White;
-        @include text-detail(24px, 32px, 600);
+        @include text-detail(7.5vw, 32px, 600);
         padding-left: 5vw;
         margin: 0;
         @media (min-width: $tablet) {
@@ -89,10 +96,7 @@ body {
     @media (min-width: $tablet) {
         padding: 2.25rem;
     }
-    @media (min-width: $desktop) {
-        padding-left: calc((100% - #{$desktop})/2 + 128px);
-        padding-right: calc((100% - #{$desktop})/2 + 128px);
-    }
+    @include padding-calc;
     &__title {
         margin: 0;
         padding: 1.5rem 1rem 1rem 0;
@@ -144,7 +148,7 @@ body {
         @extend .about__quote;
     }
     &__detail {
-        @include text-detail(13px, 18px, normal);
+        @include detail-spec;
         @media (min-width: $tablet) {
             @include text-detail(14px, 22px, normal);
             margin-right: 1rem;
@@ -170,10 +174,7 @@ body {
             flex-wrap: wrap;
         }
     }
-    @media (min-width: $desktop) {
-        padding-left: calc((100% - #{$desktop})/2 + 128px);
-        padding-right: calc((100% - #{$desktop})/2 + 128px);
-    }
+    @include padding-calc;
     &__title {
         @extend .about__title;
         padding-bottom: 0;
@@ -207,10 +208,7 @@ body {
             align-items: baseline
         }
     }
-    @media (min-width: $desktop) {
-        padding-left: calc((100% - #{$desktop})/2 + 128px);
-        padding-right: calc((100% - #{$desktop})/2 + 128px);
-    }
+    @include padding-calc;
     &__title {
         @extend .about__title;
         color: $White;
@@ -219,9 +217,8 @@ body {
         margin-right: 1.7rem;
     }
     &__detail {
-        @include text-detail(13px, 18px, normal);
+        @include detail-spec;
         color: $White;
-        padding-right: 6rem;
         &--coloured {
             color: $Mercury;
         }

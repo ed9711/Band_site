@@ -1,0 +1,14 @@
+@use "./colour" as *;
+
+
+@keyframes colour-change {
+    0% {
+        color: $White;
+    }
+    50% {
+        color: $Mercury;
+    }
+    100% {
+        color: $Silver;
+    }
+}

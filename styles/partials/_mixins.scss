@@ -1,12 +1,19 @@
-// text detail 
-// img?
-// @media (min-width: $desktop) {
-//     padding-left: calc((100% - #{$desktop})/2 + 128px);
-//     padding-right: calc((100% - #{$desktop})/2 + 128px);
-// }
+@use "./global" as *;
+
 
 @mixin text-detail($size, $height, $weight) {
     font-size: $size;
     line-height: $height;
     font-weight: $weight;
+}
+
+@mixin padding-calc {
+    @media (min-width: $desktop) {
+        padding-left: calc((100% - #{$desktop})/2 + 128px);
+        padding-right: calc((100% - #{$desktop})/2 + 128px);
+    }
+}
+
+@mixin detail-spec {
+    @include text-detail(13px, 18px, normal)
 }
