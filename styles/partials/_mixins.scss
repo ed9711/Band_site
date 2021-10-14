@@ -1,4 +1,6 @@
-@use "./global" as *;
+@use "./vars" as *;
+@use "./colour" as *;
+@use "./fonts" as *;
 
 
 @mixin text-detail($size, $height, $weight) {
@@ -24,5 +26,28 @@
         animation-duration: 0.3s;
         animation-fill-mode: forwards;
         animation-timing-function: linear;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin title-style {
+    margin: 0;
+    padding: 1.5rem 1rem 1rem 0;
+    color: $BandSite-Black;
+    @include text-detail(24px, 32px, 600);
+    @media (min-width: $tablet) {
+        padding: 0.75rem 2.25rem 2.25rem 0;
+        @include text-detail(36px, 44px, 600);
     }
 }
