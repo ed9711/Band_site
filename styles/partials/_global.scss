@@ -23,6 +23,8 @@ body {
     width: 100vw;
     background-color: $BandSite-Black;
     &__title {
+        display: flex;
+        justify-content: center;
         color: $White;
         text-align: center;
         margin-top: 0;

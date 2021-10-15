@@ -6,3 +6,59 @@
 @use "./partials/fonts" as *;
 
 
+.hero {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("/assets/Images/hero-shows.jpg");
+    background-size: 102%;
+    background-blend-mode: darken;
+    height: auto;
+    @include desktop {
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 10rem 0 12rem 0;
+        background-position: bottom 76% right 0%;
+    }
+    &__title {
+        display: flex;
+        flex-direction: column;
+        width: 64vw;
+        color: $White;
+        @include text-detail(7.5vw, 10vw, 600);
+        padding-left: 5vw;
+        margin: 0;
+        @media (min-width: $tablet) {
+            @include text-detail(60px, 76px, 600);
+            width: 510px;
+        }
+        @include desktop {
+            padding-left: 10vw;
+            width: 505px;
+        }
+    }
+    &__subtitle {
+        color: $White;
+        padding: 10% 0 0 5vw;
+        margin-bottom: 1rem;
+        @include text-detail(4vw, 18px, normal);
+        @media (min-width: $tablet) {
+            @include text-detail(30px, 18px, normal);
+        }
+        @media (min-width: $desktop) {
+            padding-left: 10vw;
+        }
+    }
+    &__player {
+        width: calc(0.25*(100% - 320px) + 288px);
+        height: 288px*0.35;
+        padding: 5vw 5vw 10vw 5vw;
+        @include tablet {
+            width: 400px;
+            height: 400px*0.35;
+        }
+        @include desktop {
+            padding: 0;
+            padding-left: 10vw;
+        }
+    }
+}
