@@ -27,7 +27,7 @@
         @include text-detail(7.5vw, 10vw, 600);
         padding-left: 5vw;
         margin: 0;
-        @media (min-width: $tablet) {
+        @include tablet {
             @include text-detail(60px, 76px, 600);
             width: 510px;
         }
@@ -41,10 +41,10 @@
         padding: 10% 0 0 5vw;
         margin-bottom: 1rem;
         @include text-detail(4vw, 18px, normal);
-        @media (min-width: $tablet) {
+        @include tablet {
             @include text-detail(30px, 18px, normal);
         }
-        @media (min-width: $desktop) {
+        @include desktop {
             padding-left: 10vw;
         }
     }
@@ -60,5 +60,86 @@
             padding: 0;
             padding-left: 10vw;
         }
+    }
+}
+
+.shows {
+    @include tablet {
+        padding: 0 2.5vw;
+    }
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        &__superblock {
+            width: 66%;
+            padding: 0 3.5rem 2rem 0;
+        }
+    }
+    @include padding-calc;
+    &__title {
+        @include title-style;
+        padding-bottom: 1.5rem;
+        padding-left: 5vw;
+        @include tablet {
+            padding-left: 2.5vw;
+            padding-top: 3rem;
+        }
+        @include desktop {
+            padding-left: 6rem;
+        }
+    }
+    &__block {
+        padding: 0 5vw 1rem 5vw;
+        border-bottom: 1px solid $Mercury;
+        margin-bottom: 1rem;
+        @include tablet {
+            padding: 0 2.5vw 1rem 2.5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        @include desktop {
+            padding: 0 2rem 1rem 2rem;
+        }
+    }
+    &__subblock {
+        padding-bottom: 1rem;
+        @include tablet {
+            padding-bottom: 0;
+        }
+    }
+    &__detail {
+        @include text-detail(14px, 22px, normal);
+        @include tablet {
+            width: 121px;
+        }
+        &--coloured {
+            color: $Silver;
+            @include text-detail(11px, 18px, normal);
+            @include tablet {
+                padding-bottom: 2rem;
+            }
+        }
+        &--bold {
+            font-weight: 600;
+            @include desktop {
+                padding-right: 5rem;
+            }
+        }
+    }
+    &__button {
+        @include text-detail(14px, 22px, normal);
+        width: 100%;
+        background-color: $BandSite-Black;
+        color: $White;
+        padding: 0.5rem 0;
+        border-radius: 5px;
+        @include tablet {
+            width: 20%;
+            padding: 0;
+            height: 35px;
+        }
+
     }
 }

@@ -10,7 +10,7 @@
 }
 
 @mixin padding-calc {
-    @media (min-width: $desktop) {
+    @include desktop {
         padding-left: calc((100% - #{$desktop})/2 + 128px);
         padding-right: calc((100% - #{$desktop})/2 + 128px);
     }
@@ -46,7 +46,7 @@
     padding: 1.5rem 1rem 1rem 0;
     color: $BandSite-Black;
     @include text-detail(24px, 32px, 600);
-    @media (min-width: $tablet) {
+    @include tablet {
         padding: 0.75rem 2.25rem 2.25rem 0;
         @include text-detail(36px, 44px, 600);
     }

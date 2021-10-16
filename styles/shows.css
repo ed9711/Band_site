@@ -333,4 +333,128 @@ body {
     padding: 0;
     padding-left: 10vw;
   }
+}
+
+@media (min-width: 768px) {
+  .shows {
+    padding: 0 2.5vw;
+  }
+}
+@media (min-width: 1280px) {
+  .shows {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .shows__superblock {
+    width: 66%;
+    padding: 0 3.5rem 2rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  .shows {
+    padding-left: calc((100% - 1280px)/2 + 128px);
+    padding-right: calc((100% - 1280px)/2 + 128px);
+  }
+}
+.shows__title {
+  margin: 0;
+  padding: 1.5rem 1rem 1rem 0;
+  color: #323232;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+  padding-left: 5vw;
+}
+@media (min-width: 768px) {
+  .shows__title {
+    padding: 0.75rem 2.25rem 2.25rem 0;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+  }
+}
+@media (min-width: 768px) {
+  .shows__title {
+    padding-left: 2.5vw;
+    padding-top: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__title {
+    padding-left: 6rem;
+  }
+}
+.shows__block {
+  padding: 0 5vw 1rem 5vw;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .shows__block {
+    padding: 0 2.5vw 1rem 2.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__block {
+    padding: 0 2rem 1rem 2rem;
+  }
+}
+.shows__subblock {
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .shows__subblock {
+    padding-bottom: 0;
+  }
+}
+.shows__detail {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+}
+@media (min-width: 768px) {
+  .shows__detail {
+    width: 121px;
+  }
+}
+.shows__detail--coloured {
+  color: #AFAFAF;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: normal;
+}
+@media (min-width: 768px) {
+  .shows__detail--coloured {
+    padding-bottom: 2rem;
+  }
+}
+.shows__detail--bold {
+  font-weight: 600;
+}
+@media (min-width: 1280px) {
+  .shows__detail--bold {
+    padding-right: 5rem;
+  }
+}
+.shows__button {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+  width: 100%;
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .shows__button {
+    width: 20%;
+    padding: 0;
+    height: 35px;
+  }
 }/*# sourceMappingURL=shows.css.map */
