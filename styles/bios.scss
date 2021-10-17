@@ -27,7 +27,7 @@
 }
 
 .about {
-    padding: 0 1rem;
+    padding: 0 5vw;
     @media (min-width: $tablet) {
         padding: 2.25rem;
     }
@@ -93,7 +93,7 @@
 
 .photos {
     background-color: $Alabaster;
-    padding: 0 1rem;
+    padding: 0 5vw 1rem 5vw;
     @media (min-width: $tablet) {
         padding: 2.25rem;
         &__block {
@@ -122,6 +122,73 @@
     }
     &__img {
         @extend .about__img;
+    }
+}
+
+.comments {
+    &__title {
+        @include title-style;
+        padding-bottom: 1.5rem;
+        padding-left: 5vw;
+    }
+    &__block {
+        display: flex;
+    }
+    &__avatar {
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+        background-image: url(/assets/Images/Mohan-muruge.jpg);
+        background-size: 157%;
+        background-position: 14% 0%;
+        background-color: $Mercury;
+        margin: 1.5rem 1rem 0 5vw ;
+        @include tablet {
+            height: 48px;
+            width: 48px;
+        }
+    }
+    &__form {
+        padding-right: 1rem;
+        width: 75%;
+        &-block {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 1rem;
+        }
+        &-lable {
+            @include text-detail(12px, 22px, normal);
+            color: $Silver;
+        }
+        &-field {
+            height: 36px;
+            background-color: $Alabaster;
+            border-radius: 4px;
+            border: 1px solid $Mercury;
+            &:active {
+                border: 1px solid $BandSite-Black;
+            }
+            &--large {
+                height: 96px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+        &-submit {
+            @include text-detail(14px, 22px, normal);
+            background-color: $BandSite-Black;
+            color: $White;
+            padding: 0.5rem 80px;
+            border-radius: 5px;
+            float: right;
+        }
+    }
+    &__divider {
+        height: 1px;
+        border: 0;
+        border-top: 1px solid $Mercury;
+        margin: 1rem 5vw;
+        padding: 0;
     }
 }
 

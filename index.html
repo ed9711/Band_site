@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Band Site</title>
     <link rel="stylesheet" href="/styles/bios.css">
+    <script src="/scripts/index-page.js" defer></script>
 </head>
 <body>
     <nav class="nav">
@@ -74,6 +75,25 @@
             <div class="photos__img-container"><img class="photos__img" src="/assets/Images/Photo-gallery-9.jpg" alt="Photo-gallery-9"></div>
         </div>
     </section>
+
+    <section class="comments">
+        <div class="comments__title">Join the Conversation</div>
+        <div class="comments__block">
+            <div class="comments__avatar"></div>
+            <form action="" method="get" class="comments__form" id="form">
+                <div class="comments__form-block">
+                  <label class="comments__form-lable" for="name">NAME</label>
+                  <input class="comments__form-field" type="text" name="name" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="comments__form-block">
+                  <label class="comments__form-lable" for="comment">COMMENT</label>
+                  <div><textarea class="comments__form-field comments__form-field--large" type="text" name="comment" id="comment" placeholder="Add a new comment" required></textarea></div>
+                </div>
+                  <div><input class="comments__form-submit" type="submit" value="COMMENT"></div>
+              </form>
+        </div>
+        <hr class="comments__divider">
+    </section>
     
     <footer class="footer">
         <div class="footer__section">
@@ -106,6 +126,6 @@
             <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
         </div>
     </footer>
-    <script src="/scripts/index-page.js"></script>
+    
 </body>
 </html>
