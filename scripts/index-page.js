@@ -34,12 +34,11 @@ const displayComments = (comments) => {
         const commentBlock = createElement("div", "comments__block");
         allComments.appendChild(commentBlock);
         
-        const avatar = createElement("div", "comments__avatar");
-        avatar.style["background-image"] = "none";
-        allComments.appendChild(avatar);
+        const avatar = createElement("div", ["comments__avatar", "comments__avatar--empty"]);
+        commentBlock.appendChild(avatar);
         
         const comment = createElement("div", "comments__comment");
-        allComments.appendChild(comment);
+        commentBlock.appendChild(comment);
     
         const name = createElement("div", "comments__comment-name");
         name.innerText = item["name"];

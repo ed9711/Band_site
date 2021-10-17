@@ -94,7 +94,7 @@
 .photos {
     background-color: $Alabaster;
     padding: 0 5vw 1rem 5vw;
-    @media (min-width: $tablet) {
+    @include tablet {
         padding: 2.25rem;
         &__block {
             display: flex;
@@ -126,13 +126,21 @@
 }
 
 .comments {
+    @include tablet {
+        padding: 0 5vw;
+    }
+    @include padding-calc;
     &__title {
         @include title-style;
-        padding-bottom: 1.5rem;
-        padding-left: 5vw;
+        padding: 1rem 5vw 1.5rem 5vw;
+        @include tablet {
+            padding-top: 3rem;
+        }
     }
     &__block {
         display: flex;
+        max-width: 700px;
+        margin: 0 auto;
     }
     &__avatar {
         border-radius: 50%;
@@ -143,14 +151,24 @@
         background-position: 14% 0%;
         background-color: $Mercury;
         margin: 1.5rem 1rem 0 5vw ;
+        &--empty {
+            background-image: none;
+            margin-top: 0;
+        }
         @include tablet {
             height: 48px;
             width: 48px;
         }
+        @include desktop {
+            margin-left: 4rem;
+        }
     }
     &__form {
-        padding-right: 1rem;
-        width: 75%;
+        padding-right: 5vw;
+        width: 73%;
+        @include tablet {
+            padding-right: 40px;
+        }
         &-block {
             display: flex;
             flex-direction: column;
@@ -189,6 +207,41 @@
         border-top: 1px solid $Mercury;
         margin: 1rem 5vw;
         padding: 0;
+        max-width: 653px;
+        @include tablet {
+            margin-left: calc((100vw - #{$tablet})/2 + 38.4px);
+        }
+        @include desktop {
+            margin-left: 230px;
+            margin-right: 64px;
+        }
+    }
+    &__comment {
+        width: 73%;
+        padding-right: 5vw;
+        position: relative;
+        @include desktop {
+            padding-right: 4rem;
+        }
+        &-name {
+            color: $BandSite-Black;
+            @include text-detail(14px, 22px, 600);
+            margin: 1rem 0;
+            margin-top: 0;
+        }
+        &-time {
+            position: absolute;
+            right: 5vw;
+            top: 0px;
+            @include text-detail(14px, 22px, normal);
+            color: $Silver;
+            @include desktop {
+                right: 4rem;
+            }
+        }
+        &-text {
+            @include detail-spec;
+        }
     }
 }
 
