@@ -15,7 +15,7 @@
     height: auto;
     @include desktop {
         flex-direction: row;
-        align-items: flex-end;
+        align-items: center;
         padding: 10rem 0 12rem 0;
         background-position: bottom 76% right 0%;
     }
@@ -34,6 +34,7 @@
         @include desktop {
             padding-left: 10vw;
             width: 505px;
+            padding-bottom: 25%;
         }
     }
     &__subtitle {
@@ -46,6 +47,7 @@
         }
         @include desktop {
             padding-left: 10vw;
+            padding-top: 25%;
         }
     }
     &__player {
@@ -65,7 +67,7 @@
 
 .shows {
     @include tablet {
-        padding: 0 2.5vw;
+        padding: 1rem 2.5vw;
     }
     @include desktop {
         display: flex;
@@ -79,7 +81,6 @@
     @include padding-calc;
     &__title {
         @include title-style;
-        padding-bottom: 1.5rem;
         padding-left: 5vw;
         @include tablet {
             padding-left: 2.5vw;
@@ -89,18 +90,28 @@
             padding-left: 6rem;
         }
     }
+    &__subtitle {
+        display: flex;
+        padding: 1rem 2.5vw 0 2.5vw;
+        justify-content: space-between;
+        @include desktop {
+            padding: 1rem 2rem 1rem 2rem;
+        }
+    }
     &__block {
-        padding: 0 5vw 1rem 5vw;
+        padding: 1rem 5vw 1rem 5vw;
         border-bottom: 1px solid $Mercury;
-        margin-bottom: 1rem;
+        &:hover {
+            background-color: $Alabaster;
+        }
         @include tablet {
-            padding: 0 2.5vw 1rem 2.5vw;
+            padding: 1rem 2.5vw 1rem 2.5vw;
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: baseline;
         }
         @include desktop {
-            padding: 0 2rem 1rem 2rem;
+            padding: 1rem 2rem 1rem 2rem;
         }
     }
     &__subblock {
@@ -118,13 +129,24 @@
             color: $Silver;
             @include text-detail(11px, 18px, normal);
             @include tablet {
-                padding-bottom: 2rem;
+                padding-bottom: 1rem;
+                @include text-detail(12px, 18px, normal);
+            }
+            @include desktop {
+                &:first-of-type {
+                    padding-right: 5rem;
+                }
             }
         }
         &--bold {
             font-weight: 600;
             @include desktop {
                 padding-right: 5rem;
+            }
+        }
+        &--delete {
+            @include tablet {
+                display: none;
             }
         }
     }
@@ -140,6 +162,12 @@
             padding: 0;
             height: 35px;
         }
+        &--hidden {
+            visibility: hidden;
+        }
 
     }
+}
+.shows .shows__block--active {
+    background-color: $Silver;
 }

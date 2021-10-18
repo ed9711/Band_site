@@ -17,10 +17,10 @@
         @include text-detail(7.5vw, 32px, 600);
         padding-left: 5vw;
         margin: 0;
-        @media (min-width: $tablet) {
+        @include tablet {
             @include text-detail(60px, 32px, 600);
         }
-        @media (min-width: $desktop) {
+        @include desktop {
             padding-left: 10vw;
         }
     }
@@ -28,7 +28,7 @@
 
 .about {
     padding: 0 5vw;
-    @media (min-width: $tablet) {
+    @include tablet {
         padding: 2.25rem;
     }
     @include padding-calc;
@@ -40,13 +40,13 @@
         height: 50vw;
         overflow: hidden;
         position: relative;
-        @media (min-width: $tablet) {
+        @include tablet {
             width: auto;
             height: 40vw;
             max-height: 618.85px;
             margin: 0 3rem;
         }
-        @media (min-width: $desktop) {
+        @include desktop {
             margin: 0 5.5rem;
         }
     }
@@ -60,7 +60,7 @@
         color: $BandSite-Black;
         @include text-detail(14px, 22px, 600);
         margin: 1rem 0;
-        @media (min-width: $tablet) {
+        @include tablet{
             @include text-detail(23px, 32px, 600);
             margin: 2.25rem 3rem 1rem 3rem;
             &--small {
@@ -68,7 +68,7 @@
                 margin-top: 0
             }
         }
-        @media (min-width: $desktop) {
+        @include desktop {
             margin: 2.25rem 5.5rem 1rem 5.5rem;
         }
     }
@@ -77,13 +77,13 @@
     }
     &__detail {
         @include detail-spec;
-        @media (min-width: $tablet) {
+        @include tablet {
             @include text-detail(14px, 22px, normal);
             margin-right: 1rem;
             &-container {
                 display: flex;
                 margin: 0 3rem 1rem 3rem;
-                @media (min-width: $desktop) {
+                @include desktop {
                     margin: 0 5.5rem 1rem 5.5rem;
                 }
             }
@@ -110,12 +110,12 @@
     &__img-container {
         @extend .about__img-container;
         margin: 1rem 0;
-        @media (min-width: $tablet) {
+        @include tablet {
             margin: 0;
             width: 31%;
             height: 18vw;
         }
-        @media (min-width: $desktop) {
+        @include desktop {
             max-height: 200px;
             width: 32%;
         }
@@ -228,6 +228,9 @@
             @include text-detail(14px, 22px, 600);
             margin: 1rem 0;
             margin-top: 0;
+            @include desktop {
+                font-size: 15px;
+            }
         }
         &-time {
             position: absolute;
@@ -237,10 +240,14 @@
             color: $Silver;
             @include desktop {
                 right: 4rem;
+                font-size: 15px;
             }
         }
         &-text {
             @include detail-spec;
+            @include desktop {
+                font-size: 14px;
+            }
         }
     }
 }

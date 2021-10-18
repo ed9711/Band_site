@@ -16,7 +16,7 @@ const comments = [
     }
 ];
 
-const createElement = (type, classes) => {
+const createElement = (type) => (classes) => {
     let newElement = document.createElement(type);
     if (classes === ""){
         return newElement;
@@ -29,22 +29,25 @@ const createElement = (type, classes) => {
     return newElement;
   };
 
+const createDiv = createElement("div");
+const createParagraph = createElement("p");
+
 const displayComments = (comments) => {
     comments.forEach((item)=>{
-        const commentBlock = createElement("div", "comments__block");
+        const commentBlock = createDiv("comments__block");
         allComments.appendChild(commentBlock);
         
-        const avatar = createElement("div", ["comments__avatar", "comments__avatar--empty"]);
+        const avatar = createDiv(["comments__avatar", "comments__avatar--empty"]);
         commentBlock.appendChild(avatar);
         
-        const comment = createElement("div", "comments__comment");
+        const comment = createDiv("comments__comment");
         commentBlock.appendChild(comment);
     
-        const name = createElement("div", "comments__comment-name");
+        const name = createDiv("comments__comment-name");
         name.innerText = item["name"];
-        const time = createElement("div", "comments__comment-time");
+        const time = createDiv( "comments__comment-time");
         time.innerText = item["time"];
-        const text = createElement("p", ["comments__comment-text", "asdf"]);
+        const text = createParagraph("comments__comment-text");
         text.innerText = item["text"];
         comment.append(name, time, text);
     
@@ -55,7 +58,7 @@ const displayComments = (comments) => {
 };
 
 const commentSection = document.querySelector(".comments");
-const allComments = createElement("div", "comments__all");
+const allComments = createDiv("comments__all");
 commentSection.appendChild(allComments);
 
 displayComments(comments);
