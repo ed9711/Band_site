@@ -135,7 +135,10 @@
             }
             @include desktop {
                 &:first-of-type {
-                    padding-right: 5rem;
+                    padding-right: 7rem;
+                }
+                &:nth-of-type(2) {
+                    padding-right: 7rem;
                 }
             }
         }

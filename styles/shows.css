@@ -464,7 +464,10 @@ body {
 }
 @media (min-width: 1280px) {
   .shows__detail--coloured:first-of-type {
-    padding-right: 5rem;
+    padding-right: 7rem;
+  }
+  .shows__detail--coloured:nth-of-type(2) {
+    padding-right: 7rem;
   }
 }
 .shows__detail--bold {
