@@ -112,6 +112,7 @@
         }
         @include desktop {
             padding: 1rem 2rem 1rem 2rem;
+            width: fit-content;
         }
     }
     &__subblock {
@@ -161,6 +162,11 @@
             width: 20%;
             padding: 0;
             height: 35px;
+        }
+        @include desktop {
+            height: 40px;
+            width: 150px;
+            font-weight: 600;
         }
         &--hidden {
             visibility: hidden;

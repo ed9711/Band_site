@@ -425,6 +425,9 @@ body {
 @media (min-width: 1280px) {
   .shows__block {
     padding: 1rem 2rem 1rem 2rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 .shows__subblock {
@@ -492,6 +495,13 @@ body {
     width: 20%;
     padding: 0;
     height: 35px;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__button {
+    height: 40px;
+    width: 150px;
+    font-weight: 600;
   }
 }
 .shows__button--hidden {
