@@ -1,21 +1,24 @@
-const comments = [
-    {
-        "name": "Connor Walton",
-        "time": "02/17/2021",
-        "text": "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    },
-    {
-        "name": "Emilie Beach",
-        "time": "01/09/2021",
-        "text": "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-    },
-    {
-        "name": "Miles Acosta",
-        "time": "12/20/2020",
-        "text": "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-    }
-];
+// global variables
+const apiKey = "?api_key=9e553170-e229-4c48-875b-c54e2903e717";
+// const comments = [
+//     {
+//         "name": "Connor Walton",
+//         "time": "02/17/2021",
+//         "text": "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+//     },
+//     {
+//         "name": "Emilie Beach",
+//         "time": "01/09/2021",
+//         "text": "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
+//     },
+//     {
+//         "name": "Miles Acosta",
+//         "time": "12/20/2020",
+//         "text": "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+//     }
+// ];
 
+// functions
 const createElement = (type) => (classes) => {
     let newElement = document.createElement(type);
     if (classes === ""){
@@ -32,6 +35,7 @@ const createElement = (type) => (classes) => {
 const createDiv = createElement("div");
 const createParagraph = createElement("p");
 
+// displays all comments 
 const displayComments = (comments) => {
     comments.forEach((item)=>{
         const commentBlock = createDiv("comments__block");
@@ -57,17 +61,33 @@ const displayComments = (comments) => {
     });
 };
 
-const commentSection = document.querySelector(".comments");
-const allComments = createDiv("comments__all");
-commentSection.appendChild(allComments);
-
-displayComments(comments);
-
+// add and display a new comment
 const displayComment = (newComment)=>{
     comments.unshift(newComment);
     displayComments(comments);
 };
+  
+// main
 
+// read comments from API
+const comments = [];
+const url = "https://project-1-api.herokuapp.com/comments" + apiKey;
+axios.get(url).then(response => {
+    response.data.forEach(item => {
+        let newComment = {
+            name: item.name,
+            time: item.timestamp,
+            text: item.comment
+        };
+        comments.push(newComment);
+    });
+}).then(()=>displayComments(comments));
+
+const commentSection = document.querySelector(".comments");
+const allComments = createDiv("comments__all");
+commentSection.appendChild(allComments);
+
+// read in a new comment from the page
 const form = document.querySelector(".comments__form");
 form.addEventListener("submit", (event)=>{
     event.preventDefault();
