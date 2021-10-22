@@ -89,7 +89,7 @@ const mediaQ = (size)=>{
         createSubTitle();
     } else {
         superBlock.innerText = "";
-        mobileTable();
+        mobileTable(info);
     }
 };
 
