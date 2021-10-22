@@ -1,37 +1,5 @@
-const apiKey = "?api_key=9e553170-e229-4c48-875b-c54e2903e717";
-const info = [
-    {
-        "DATE": "Mon Sept 06 2021",
-        "VENUE": "Ronald Lane",
-        "LOCATION": "San Francisco, CA"
-    },
-    {
-        "DATE": "Tue Sept 21 2021",
-        "VENUE": "Pier 3 East",
-        "LOCATION": "San Francisco, CA"
-    },
-    {
-        "DATE": "Fri Oct 15 2021",
-        "VENUE": "View Lounge",
-        "LOCATION": "San Francisco, CA"
-    },
-    {
-        "DATE": "Sat Nov 06 2021",
-        "VENUE": "Hyatt Agency",
-        "LOCATION": "San Francisco, CA"
-    },
-    {
-        "DATE": "Fri Nov 26 2021",
-        "VENUE": "Moscow Center",
-        "LOCATION": "San Francisco, CA"
-    },
-    {
-        "DATE": "Wed Dec 15 2021",
-        "VENUE": "Press Club",
-        "LOCATION": "San Francisco, CA"
-    },
-]
-
+// functions
+// create element
 const createElement = (type) => (classes) => {
     let newElement = document.createElement(type);
     if (classes === ""){
@@ -45,22 +13,21 @@ const createElement = (type) => (classes) => {
     return newElement;
   };
 
+// create show block
 const createSubBlock = (key, show, block)=>{
     const date = createDiv(["shows__detail", "shows__detail--coloured", "shows__detail--delete"]);
     date.innerText = key;
     const time = createDiv(["shows__detail", "shows__detail--bold"]);
-    time.innerText = show[key];
+    if (key === "DATE") {
+        time.innerText = timeStampToTime(show[key]);
+    } else {
+        time.innerText = show[key];
+    }
     block.append(date, time);
 };
 
-const createDiv = createElement("div");
-const createButton = createElement("button");
-
-const superBlock = createDiv("shows__superblock");
-const shows = document.querySelector(".shows");
-shows.appendChild(superBlock);
-
-const mobileTable = ()=>{
+// create table table
+const mobileTable = (info)=>{
     info.forEach((show)=>{
         const block = createDiv("shows__block");
         superBlock.appendChild(block);
@@ -78,6 +45,8 @@ const mobileTable = ()=>{
         button.innerText = "BUY TICKETS";
     });
 }
+
+// secondary title block
 const createSubTitle = ()=>{
     const subTitleBlock = createDiv("shows__subtitle");
     superBlock.prepend(subTitleBlock);
@@ -95,6 +64,26 @@ const createSubTitle = ()=>{
     button.innerText = "BUY TICKETS";
 };
 
+// react to change in screen sizes
+const watchSize = () => {
+    const tablet = window.matchMedia("(min-width: 768px)");
+    mediaQ(tablet);
+    tablet.addEventListener("change", (e)=>mediaQ(tablet));
+
+    document.querySelectorAll(".shows__block").forEach((block)=>{
+        block.addEventListener("click", (e)=>{
+            const html = document.querySelector("html");
+            const elements = document.getElementsByClassName("shows__block--active");
+            for (let i=0; i<elements.length; i++){
+                if (elements[i] != block){
+                    elements[i].classList.remove("shows__block--active");
+                }
+            }
+            block.classList.toggle("shows__block--active");
+        });
+    });
+};
+
 const mediaQ = (size)=>{
     if (size.matches){
         createSubTitle();
@@ -103,21 +92,47 @@ const mediaQ = (size)=>{
         mobileTable();
     }
 };
-mobileTable();
-const tablet = window.matchMedia("(min-width: 768px)");
-mediaQ(tablet);
-tablet.addEventListener("change", (e)=>mediaQ(tablet));
 
-document.querySelectorAll(".shows__block").forEach((block)=>{
-    block.addEventListener("click", (e)=>{
-        const html = document.querySelector("html");
-        const elements = document.getElementsByClassName("shows__block--active");
-        for (let i=0; i<elements.length; i++){
-            if (elements[i] != block){
-                elements[i].classList.remove("shows__block--active");
-            }
-        }
-        block.classList.toggle("shows__block--active");
+// get shows data from API
+const getShowdates = (url, info) => {
+    axios.get(url)
+    .then(response => {
+        response.data.forEach(item => {
+            let newInfo = {
+                DATE: parseInt(item.date),
+                VENUE: item.place,
+                LOCATION: item.location
+            };
+            console.log(item);
+            info.push(newInfo);
+        });
+    })
+    .then(()=>{
+        mobileTable(info);
+        watchSize();
+    })
+    .catch(error => console.error(error));
+};
 
-    });
-});
+// get time from timestamp
+const timeStampToTime = (timeStamp) => {
+    const date = new Date(timeStamp);
+    const time = `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`;
+    return time;
+};
+
+const createDiv = createElement("div");
+const createButton = createElement("button");
+
+const superBlock = createDiv("shows__superblock");
+const shows = document.querySelector(".shows");
+shows.appendChild(superBlock);
+const apiKey = "?api_key=9e553170-e229-4c48-875b-c54e2903e717";
+const urlNoKey = "https://project-1-api.herokuapp.com/showdates";
+const url = urlNoKey + apiKey;
+const info = []
+
+getShowdates(url, info);
+
+
+
