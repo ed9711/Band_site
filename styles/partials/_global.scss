@@ -26,7 +26,7 @@ body {
         margin-top: 0;
         padding-top: 1rem;
         text-decoration: none;
-        @include text-detail(24px, 32px, normal);
+        @include text-detail(1.5rem, 2rem, normal);
         margin-bottom: 0.3rem;
         @include tablet {
             padding-top: 1.5rem;
@@ -105,16 +105,16 @@ body {
             color: $Mercury;
         }
         @include tablet {
-            @include text-detail(14px, 22px, normal);
+            @include text-detail(0.875rem, 1.375rem, normal);
             padding-right: 7vw;
         }
     }
     &__link {
         text-decoration: none;
-        font-size: 12px;
+        font-size: 0.75rem;
     }
     &__ending {
-        @include text-detail(24px, 32px, normal);
+        @include text-detail(1.5rem, 2rem, normal);
         color: $White;
         padding-top: 2.5rem;
         margin: 0;
@@ -128,12 +128,12 @@ body {
         }
     }
     &__copyright {
-        @include text-detail(11px, 18px, normal);
+        @include text-detail(0.6875rem, 1.125rem, normal);
         color: $Mercury;
         margin: 0;
         padding: 1rem 0;
         @include tablet {
-            @include text-detail(13px, 22px, normal);
+            @include text-detail(0.8125rem, 1.375rem, normal);
             padding: 2.25rem 0;
         }
     }

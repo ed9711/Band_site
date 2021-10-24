@@ -78,8 +78,8 @@ body {
   margin-top: 0;
   padding-top: 1rem;
   text-decoration: none;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: normal;
   margin-bottom: 0.3rem;
 }
@@ -110,8 +110,8 @@ body {
   width: 50%;
   text-align: center;
   text-decoration: none;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: normal;
 }
 .nav-bar__link:hover {
@@ -190,16 +190,16 @@ body {
   margin: 0;
   padding: 1.5rem 1rem 1rem 0;
   color: #323232;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
   .footer__title {
     padding: 0.75rem 2.25rem 2.25rem 0;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 600;
   }
 }
@@ -207,8 +207,8 @@ body {
   margin-right: 1.7rem;
 }
 .footer__detail {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: normal;
   display: flex;
   flex-direction: column;
@@ -219,19 +219,19 @@ body {
 }
 @media (min-width: 768px) {
   .footer__detail {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: normal;
     padding-right: 7vw;
   }
 }
 .footer__link {
   text-decoration: none;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .footer__ending {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: normal;
   color: #FFFFFF;
   padding-top: 2.5rem;
@@ -250,8 +250,8 @@ body {
   }
 }
 .footer__copyright {
-  font-size: 11px;
-  line-height: 18px;
+  font-size: 0.6875rem;
+  line-height: 1.125rem;
   font-weight: normal;
   color: #e1e1e1;
   margin: 0;
@@ -259,8 +259,8 @@ body {
 }
 @media (min-width: 768px) {
   .footer__copyright {
-    font-size: 13px;
-    line-height: 22px;
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
     font-weight: normal;
     padding: 2.25rem 0;
   }
@@ -276,15 +276,15 @@ body {
   padding: 25% 0;
   color: #FFFFFF;
   font-size: 7.5vw;
-  line-height: 32px;
+  line-height: 2rem;
   font-weight: 600;
   padding-left: 5vw;
   margin: 0;
 }
 @media (min-width: 768px) {
   .hero__title {
-    font-size: 60px;
-    line-height: 32px;
+    font-size: 3.75rem;
+    line-height: 2rem;
     font-weight: 600;
   }
 }
@@ -312,15 +312,15 @@ body {
   margin: 0;
   padding: 1.5rem 1rem 1rem 0;
   color: #323232;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
 }
 @media (min-width: 768px) {
   .about__title {
     padding: 0.75rem 2.25rem 2.25rem 0;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 600;
   }
 }
@@ -351,21 +351,21 @@ body {
 }
 .about__quote, .about__subtitle {
   color: #323232;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
   margin: 1rem 0;
 }
 @media (min-width: 768px) {
   .about__quote, .about__subtitle {
-    font-size: 23px;
-    line-height: 32px;
+    font-size: 1.4375rem;
+    line-height: 2rem;
     font-weight: 600;
     margin: 2.25rem 3rem 1rem 3rem;
   }
   .about__quote--small {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
     font-weight: 600;
     margin-top: 0;
   }
@@ -376,14 +376,14 @@ body {
   }
 }
 .about__detail {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: normal;
 }
 @media (min-width: 768px) {
   .about__detail {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: normal;
     margin-right: 1rem;
   }
@@ -422,16 +422,16 @@ body {
   margin: 0;
   padding: 1.5rem 1rem 1rem 0;
   color: #323232;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   padding-bottom: 0;
 }
 @media (min-width: 768px) {
   .photos__title {
     padding: 0.75rem 2.25rem 2.25rem 0;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 600;
   }
 }
@@ -466,16 +466,16 @@ body {
   margin: 0;
   padding: 1.5rem 1rem 1rem 0;
   color: #323232;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   padding: 1rem 5vw 1.5rem 5vw;
 }
 @media (min-width: 768px) {
   .comments__title {
     padding: 0.75rem 2.25rem 2.25rem 0;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 600;
   }
 }
@@ -529,8 +529,8 @@ body {
   padding-bottom: 1rem;
 }
 .comments__form-lable {
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
   font-weight: normal;
   color: #AFAFAF;
 }
@@ -549,8 +549,8 @@ body {
   box-sizing: border-box;
 }
 .comments__form-submit {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: normal;
   background-color: #323232;
   color: #FFFFFF;
@@ -589,39 +589,39 @@ body {
 }
 .comments__comment-name {
   color: #323232;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
   margin: 1rem 0;
   margin-top: 0;
 }
 @media (min-width: 1280px) {
   .comments__comment-name {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 .comments__comment-time {
   position: absolute;
   right: 5vw;
   top: 0px;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: normal;
   color: #AFAFAF;
 }
 @media (min-width: 1280px) {
   .comments__comment-time {
     right: 4rem;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 .comments__comment-text {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: normal;
 }
 @media (min-width: 1280px) {
   .comments__comment-text {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }/*# sourceMappingURL=bios.css.map */
