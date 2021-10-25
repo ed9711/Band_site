@@ -69,10 +69,23 @@ const watchSize = () => {
     const tablet = window.matchMedia("(min-width: 768px)");
     mediaQ(tablet);
     tablet.addEventListener("change", (e)=>mediaQ(tablet));
+};
 
+const mediaQ = (size)=>{
+    if (size.matches){
+        createSubTitle();
+    } else {
+        const element = document.getElementsByClassName("shows__subtitle");
+        if (element.length !== 0) {
+            element[0].remove();
+        }
+    }
+};
+
+// change active colour
+const activeColour = () => {
     document.querySelectorAll(".shows__block").forEach((block)=>{
         block.addEventListener("click", (e)=>{
-            const html = document.querySelector("html");
             const elements = document.getElementsByClassName("shows__block--active");
             for (let i=0; i<elements.length; i++){
                 if (elements[i] != block){
@@ -82,15 +95,6 @@ const watchSize = () => {
             block.classList.toggle("shows__block--active");
         });
     });
-};
-
-const mediaQ = (size)=>{
-    if (size.matches){
-        createSubTitle();
-    } else {
-        superBlock.innerText = "";
-        mobileTable(info);
-    }
 };
 
 // get shows data from API
@@ -103,13 +107,13 @@ const getShowdates = (url, info) => {
                 VENUE: item.place,
                 LOCATION: item.location
             };
-            console.log(item);
             info.push(newInfo);
         });
     })
     .then(()=>{
         mobileTable(info);
         watchSize();
+        activeColour();
     })
     .catch(error => console.error(error));
 };
@@ -133,6 +137,5 @@ const url = urlNoKey + apiKey;
 const info = []
 
 getShowdates(url, info);
-
 
 

@@ -64,7 +64,6 @@ const getComments = (url, comments) => {
                 time: item.timestamp,
                 text: item.comment
             };
-            console.log(item);
             comments.push(newComment);
         });
     })
